@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="eng"><!--язык документа -->
+<head>
+    <meta charset="utf-8"><!--кодировка документа -->
+    <meta name="viewport" content="width=device-width, initial-scale= 1"> 
+        <!--viewport Область просмотра браузера для использования медиа запросов, оптимизированный для мобильных устройств
+        
+        width
+        -device-width - экран устройства (100vw или 100%) Минимум: 1. Максимум: 10000. Отрицательные значения: игнорируются.
+        
+        height
+        - device-height, которое равно 100vh или 100% 
+
+        initial-scale
+        Управляет уровнем масштабирования при первой загрузке страницы. Минимум: 0.1. Максимум: 10. По умолчанию: 1. Отрицательные значения: игнорируются. 
+        
+        minimum-scale
+        Определяет допустимое уменьшение масштаба страницы. Минимум: 0.1. Максимум: 10. По умолчанию: 0.1. Отрицательные значения: игнорируются.
+
+        maximum-scale
+        Определяет допустимое увеличение страницы. Любое значение меньше 3 лишает доступа. Минимум: 0.1. Максимум: 10. По умолчанию: 10. Отрицательные значения: игнорируются.
+
+        user-scalable
+        Определяет, разрешены ли действия увеличения и уменьшения масштаба на странице. Допустимые значения: 0, 1, yesили no. По умолчанию: 1, то же, что и yes. Установка значения 0, аналогичного no, противоречит рекомендациям по доступности веб-контента (WCAG).
+        -->
+        <meta name="description" content="Text description">
+        <meta name="theme-color" content="#1681ff"> <!-- цвет темы вкладки браузера -->
+        <link rel="stylesheet" href="#">
+        <script type="text/script" src="#"></script>
+</head>
+    <body>
+        <header>
+        <nav></nav>
+        </header>
+        <main>
+        <!-- <main> – используется для определения основного контента страницы. Он дает понять поисковому боту, что здесь содержится главный контент. -->
+        <section>
+            <!--<section>  может включать свой header and footer
+                - смысловой или логический раздел документа;
+                - Можете дать имя разделу, но вынести на другой сайт не можете?
+            -->
+            <h1>Список элементов сеантической разметки</h1> <!--заголовок обязателен-->
+
+                <!-- <figure>  включает всебя изображения <img>, <audio>, <video>, диаграммы, список кодов , -->    
+                <figure> 
+                    <img src="#" alt="обязательно" width="100" heigt="100">
+                    <figcaption>Заголовок figure</figcaption>
+                </figure>
+
+                <!-- <details> часто используется для создания интерактивного виджета, который пользователь может открывать и закрывать. По умолчанию виджет закрыт. При открытии он расширяется и отображает содержимое внутри.. -->
+                <details> 
+                    <summary>
+                        <!-- Совет: Тег <summary> используется в сочетании с <details>для указания видимого заголовка для сведений. -->
+                    </summary>
+                    <p>Text</p>
+                </details>
+
+
+                <!-- <audio> – добавляет, воспроизводит и управляет настройками аудиозаписи на веб-странице. -->
+                <figure>
+                    <figcaption>Title figure block audio</figcaption>
+                    <audio src="#" 
+                            Your browser does not support the
+                            <code>audio</code> element.
+                    ></audio>
+                </figure>
+
+                <!-- <video> – добавляет, воспроизводит и управляет настройками видеозаписи на веб-странице. -->
+                <video controls width="250">
+
+                    <source src="/media/cc0-videos/flower.webm"
+                            type="video/webm">
+                
+                    <source src="/media/cc0-videos/flower.mp4"
+                            type="video/mp4">
+                
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+
+                <!-- <canvas> – создает область, в которой при помощи JavaScript можно рисовать разные объекты, выводить изображения, трансформировать их и менять свойства. При помощи тега <canvas> можно создавать рисунки, анимацию, игры и др. -->
+                <canvas width="300" height="300">
+                    An alternative text describing what your canvas displays.
+                </canvas> 
+                <script>
+                    const canvas = document.querySelector('canvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'green';
+                    ctx.fillRect(10, 10, 100, 100);
+                </script>
+
+                <!-- <command> – устанавливает команду, срабатывающую при активации элемента (нажатием или сочетанием клавиш). Элемент может иметь вид кнопки, переключателя или флажка и должен быть вложен в элемент <menu>, в противном случае он не будет показан. -->
+
+                <!-- <datalist> – создает список вариантов, которые можно выбирать при наборе в текстовом поле. Изначально этот список скрыт и становится доступным при получении полем фокуса или наборе текста. -->
+                <label for="ice-cream-choice">Choose a flavor:</label>
+                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+                <datalist id="ice-cream-flavors">
+                    <option value="Chocolate">
+                    <option value="Coconut">
+                    <option value="Mint">
+                    <option value="Strawberry">
+                    <option value="Vanilla">
+                </datalist>
+
+                <!-- <embed> – используется для загрузки и отображения объектов (например, видеофайлов, флэш-роликов, некоторых звуковых файлов и т.д.), которые исходно браузер не понимает. Как правило, такие объекты требуют подключения к браузеру специального модуля, который называется плагин, или запуска вспомогательной программы. -->
+                <embed type="video/web" src="#" width="100" height="100">
+
+                <!-- <hgroup> – используется для группирования заголовков веб-страницы или раздела. Внутри располагаются теги заголовков от <h1> до <h6>. -->
+                <hgroup>
+                    <h1>Title</h1>
+                    <p>tesct for <title></title></p>
+                </hgroup>
+
+                <!-- <keygen> – отвечает за генерацию пары ключей (открытый и закрытый), которые используются для шифрования и расшифровки данных форм, а также для создания и проверки цифровой подписи. Открытый ключ отправляется на сервер вместе с данными формы, а закрытый сохраняется на локальном устройстве пользователя. -->
+
+                <!-- <mark> – помечает текст как выделенный. Такой текст ничем не отличается от обычного, но его вид может быть изменен с помощью стилей. В браузере Chrome и Firefox фоновый цвет текста внутри <mark> выделяется желтым цветом. -->
+                <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+                <!-- <meter> – используется для вывода значения в некотором известном диапазоне. Используется преимущественно для отображения числовых значений: например, количества результатов поиска, объема жидкости, давления и др. -->
+                <label for="fuel">Fuel level:</label>
+                <meter id="fuel"
+                    min="0" max="100"
+                    low="33" high="66" optimum="80"
+                    value="50">
+                    at 50/100
+                </meter>
+
+                <!-- <output> – определяет область, в которую выводится информация, преимущественно с помощью скриптов. -->
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="b" name="b" value="50" /> +
+                    <input type="number" id="a" name="a" value="10" /> =
+                    <output name="result" for="a b">60</output>
+                </form>
+
+                <!-- <progress> – используется для отображения прогресса завершенности задачи. Изменение значения происходит через JavaScript. -->
+                <label for="file">File progress:</label>
+                <progress id="file" max="100" value="70"> 70% </progress>
+
+                <!-- <ruby> – используется вместе с <rt> и <rp>. Предназначен для добавления небольшой аннотации сверху или снизу от заданного текста. Такая форма записи преимущественно используется для идеографической письменности вроде китайского языка, но может применяться и для других языков, если требуется написать один текст над другим. -->
+                <ruby>
+                    明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+                </ruby>
+
+                <!-- <time> – помечает текст внутри тега <time> как дата, время или оба значения. Может указываться непосредственно внутри контейнера <time> либо задаваться через атрибут datetime. -->
+                <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+                <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+                <!-- <wbr> — указывает браузеру место, где допускается делать перенос строки в тексте, если этого требует ширина родительского элемента. -->
+                <div id="example-paragraphs">
+                    <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+                    <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+                    <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+                </div>
+
+                <!--<iframe>-->
+                <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="300"
+                    height="200"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                </iframe>
+
+                <!--<object> Элемент HTML представляет собой внешний ресурс, который можно рассматривать как изображение, вложенный контекст просмотра или ресурс, который будет обрабатываться подключаемым модулем.<object> -->
+                <object type="application/pdf"
+                    data="/media/examples/In-CC0.pdf"
+                    width="250"
+                    height="200">
+                </object>
+
+
+            </section>
+            <article>
+            <!-- <article> может включать свой header and footer
+                    - может быть пост на форуме, статья в журнале или газете, заметка в блоге, сообщение пользователя или другая независимая контент-единица.
+                    - Можете дать имя разделу и вынести этот раздел на другой сайт? — <article> 
+            -->
+            
+                <h2>заголовок обязательно Блочные и строчные элементы</h2>
+                <h3>Блочные</h3>
+                <code>
+                    <address> - указывает, что вложенный HTML-код содержит контактную информацию для человека или людей или для организации
+                    <article> - можно оторвать от контента и вставить на дргую страницу
+                    <aside> - боковая панель
+                    <blockquote> - аключенный в нем текст является расширенной цитатой
+                        <figure>
+                            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                                <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+                            </blockquote>
+                            <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+                        </figure>
+
+                    <dd>, <dt>, <dl> - предоставляет описание, определение или значение предшествующего термина
+                        <p>Cryptids of Cornwall:</p>
+                            <dl>
+                                <dt>Beast of Bodmin</dt>
+                                <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+                                <dt>Morgawr</dt>
+                                <dd>A sea serpent.</dd>
+
+                                <dt>Owlman</dt>
+                                <dd>A giant owl-like creature.</dd>
+                            </dl>
+
+                    <div> -  это универсальный контейнер для потокового содержимого
+                    
+                    <details> элемент раскрытия сведений, <summary> элемент сводки раскрытия информации
+                        <details><summary>I have keys but no doors. I have space but no room. You can enter but can’t leave. What am I?</summary> A keyboard.</details>
+
+                    <fieldset> - используется для группировки нескольких элементов управления
+                        <form>
+                            <fieldset> - элемент легенды набора полей
+                              <legend>Choose your favorite monster</legend> - представляет собой заголовок для содержимого своего родителя
+                          
+                              <input type="radio" id="kraken" name="monster">
+                              <label for="kraken">Kraken</label><br/>
+                          
+                              <input type="radio" id="sasquatch" name="monster">
+                              <label for="sasquatch">Sasquatch</label><br/>
+                          
+                              <input type="radio" id="mothman" name="monster">
+                              <label for="mothman">Mothman</label>
+                            </fieldset>
+                          </form>
+
+
+                    
+                    <figure> рисунок с необязательным элементом подписи + <figcaption> элемент подписи к рисунку + <img>
+
+                    <footer> - элемент представляет собой нижний колонтитул для своего ближайшего предка/ Обычно содержит информацию об авторе раздела, данные об авторских правах или ссылки на соответствующие документы
+
+                    <form> - представляет собой раздел документа, содержащий интерактивные элементы управления для отправки информации
+                        <form action="" method="get" class="form-example"></form>
+
+                    <h1>--<h6> - элементы заголовка раздела
+                    <header> - представляет вводный контент, обычно группу вводных или навигационных средств
+                    <hr>  представляет собой тематический разрыв между элементами уровня абзаца
+                    <nav> -представляет собой раздел страницы, целью которого является предоставление навигационных ссылок либо в текущем документе
+                    <noscript> - пределяет раздел HTML, который будет вставлен, если тип скрипта на странице не поддерживается или если скрипты в данный момент отключены в браузере
+                    <output>
+
+                    <option> -используется для определения элемента, содержащегося в элементе <select>
+                    <p> - представляет собой абзац
+                    <pre> - представляет предварительно отформатированный текст, который должен быть представлен точно так, как он написан в файле HTML
+                    <section> - представляет собой общий автономный раздел документа, который не имеет более конкретного семантического элемента для его представления. Разделы всегда должны иметь заголовок, за очень немногими исключениями
+    
+                    <table> - таблица
+
+                    списки 
+                    <ul>, <menu></menu> не нумерованный, <ol> - нумерованный
+                    <li> - элемент списка
+                </code>
+                <h3>Строчные</h3>
+                <code>
+                    <b> - жерный - для привлечения внимания читателя,
+                    <strong> жирный - указывает на то, что его содержание имеет большое значение, серьёзность или срочность
+                    <i> - курсив, представляет собой диапазон текста, который по какой-то причине выделяется из обычного текста
+                    <small> -маленький авторские права и юридический текст, 
+                    <abbr> - представляет собой аббревиатуру или акроним.
+                    <cite>-  используется для описания ссылки на цитируемую творческую работу
+                        - <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite>
+                    <code> - сообщает что код
+                    <dfn> - используется для указания термина, определяемого в контексте определяющей фразы или предложения
+                    <em> - элемент отмечает акцентируемый текст.
+                    <kbd> - указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры,
+                        - <p>You can also create a new document using the keyboard shortcut
+                            <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.</p>
+                    <samp> - используется для включения встроенного текста, который представляет образец (или цитату) вывода компьютерной программы 
+                        - <p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+                    <time> - время
+                    <var> - редставляет имя переменной в математическом выражении или в контексте программирования 
+                          - <p>The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length, <var>w</var> the width and <var>h</var> the height of the box.</p>
+                    <a> - ссылка
+                    <bdo> - элемент переопределения двунаправленного текста 
+                          - <p>In the computer's memory, this is stored as <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo></p>
+                    <br> - создает разрыв строки в тексте (возврат каретки)
+                    <img> - изображение
+                            - <img src="clock-demo-200px.png" alt="Clock" srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w" sizes="(max-width: 600px) 200px, 50vw">
+                    <map> - элемент карты изображения
+                    <object> - элемент внешнего объекта Pdf
+                    <q> - заключенный в нем текст является короткой встроенной цитатой
+                    <script>
+                    <span> - это общий встроенный контейнер для фразового содержимого, который по своей сути ничего не представляет. Его можно использовать для группировки элементов в целях стилизации (используя атрибуты или ) или потому, что они имеют общие значения атрибутов, например . Его следует использовать только тогда, когда никакой другой семантический элемент не подходит. 
+                        - <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
+                    <sub> - элемент нижнего индекса H<sub>2</sub>0
+                    <sup> - элемент верхнего индекса
+                    <button> - интерактивный элемент , активируемый пользователем с помощью мыши, клавиатуры, пальца, голосовой команды или другой вспомогательной технологии. 
+                             - <button class="favorite styled" type="button"> Add to favorites </button>
+                    <input> - элемент ввода (ввод формы)
+                            <label for="name">Name (4 to 8 characters):</label>
+                            <input type="text" id="name" name="name" required
+                            minlength="4" maxlength="8" size="10">
+                    <label> - представляет собой заголовок для элемента в пользовательском интерфейсе.
+
+                    <select> - элемент выбора HTML
+                        - <label for="pet-select">Choose a pet:</label>
+                        -<select name="pets" id="pet-select">
+                            <option value="">--Please choose an option--</option><option value="dog">Dog</option><option value="cat">Cat</option>
+                        </select>
+                        <optgroup> - элемент группы опций
+                        <label for="dino-select">Choose a dinosaur:</label>
+                        <select id="dino-select">
+                            <optgroup label="Theropods">
+                                <option>Tyrannosaurus</option>
+                                <option>Velociraptor</option>
+                                <option>Deinonychus</option>
+                            </optgroup>
+                            <optgroup label="Sauropods">
+                                <option>Diplodocus</option>
+                                <option>Saltasaurus</option>
+                                <option>Apatosaurus</option>
+                            </optgroup>
+                        </select>
+
+                    <textarea> - представляет собой многострочный элемент управления для редактирования обычного текста
+                        - <label for="story">Tell us your story:</label>
+                        - <textarea id="story" name="story" rows="5" cols="33">It was a dark and stormy night...</textarea>
+                </code>
+                <h3>Строчно-блочные</h3>
+                <code>
+                        <audio>,
+                        <button>,
+                        <canvas>,
+                        <embed>,
+                        <input>,
+                        <keygen>,
+                        <meter>,
+                        <object>,
+                        <progress>,
+                        <select>,
+                        <textarea>,
+                        <video>.
+                </code>
+
+            </article>
+
+            <aside>
+                <!-- <aside> – определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой информации. -->
+                    <ul>
+                        <li>List 1</li>
+                        <li>List 2</li>
+                        <li>List 3</li>
+                        <li>List 4</li>
+                        <li>List 5</li>
+                        <li>List 6</li>
+                        <li>List 7</li>
+                        <li>List 8</li>
+                        <li>List 9</li>
+                        <li>List 10</li>
+                    </ul>
+            </aside>
+        </main>
+        <footer>
+            <!--
+                Тег <footer>
+                Его можно не только использовать как подвал страницы, как может показаться на первый взгляд, но и добавить, например, в нижнюю часть статьи, где будет информация об авторе, дате публикации или какие-то ссылки. 
+            -->
+                <!-- <footer> – задает «подвал» сайта или раздела, в нем может располагаться имя автора, дата документа, контактная информация или дополнительная навигация по сайту. -->
+        <footer>
+    </body>
+</html>
